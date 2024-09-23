@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 07 - JS</title>
+    <!--Criar um texto com um parágrafo e um botão para esconder esse parágrafo.
+     Usar a alteração do estilo :”display: none”;-->
+    <style>
+        #paragrafo {
+            display: paragrafo;
+        }
+    </style>
+</head>
+<body>
+    <p id="paragrafo" name="paragrafo">Este é um parágrafo que pode ser escondido.</p>
+    <button onclick="esconderParagrafo()">Esconder Parágrafo</button>
+
+    <script>
+        function esconderParagrafo() {
+            var paragrafo = document.getElementById("paragrafo");
+            paragrafo.style.display = "none";
+        }
+    </script>
+</body>
+</html>

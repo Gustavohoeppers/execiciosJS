@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 04 - JS</title>
+</head>
+<body>
+    <!--Criar um programa que tenha um campo (input) para entrada de um valor e um botão “Verificar”
+     ao ser clicado deve informar se foi informado algum valor, se ele é menor que zero, zero ou maior que zero. -->
+    <h1>Verificar Valor</h1>
+    <input type="number" id="valor" placeholder="Digite um valor">
+    <button onclick="verificarValor()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarValor() {
+            const valor = document.getElementById('valor').value;
+            const resultado = document.getElementById('resultado');
+
+            if (valor == " ") {
+                resultado.textContent = "Por favor, informe um valor.";
+            } else {
+                const numero = parseFloat(valor);
+                if (numero < 0) {
+                    resultado.textContent = "O valor é menor que zero.";
+                } else if (numero == 0) {
+                    resultado.textContent = "O valor é zero.";
+                } else {
+                    resultado.textContent = "O valor é maior que zero.";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

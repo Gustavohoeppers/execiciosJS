@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 02 - JS</title>
+        <script language="JavaScript">
+            function encontrarMaiorNumero() {  
+                let numero1 = parseInt(prompt("Digite o primeiro número:"));
+                let numero2 = parseInt(prompt("Digite o segundo número:"));
+
+                if (isNaN(numero1) || isNaN(numero2)) {
+                    alert("Digite números inteiros válidos.");
+                    return;
+                }
+            
+                let maiorNumero = numero1 > numero2 ? numero1 : numero2;
+
+                document.getElementById('resultado').innerText = "O maior número é: " + maiorNumero;
+            }
+        </script>
+
+</head>
+<body>
+        <h1>Encontre o Maior Número</h1>
+        <button onclick="encontrarMaiorNumero()">Encontrar maior número</button>
+        <p id="resultado"></p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 05 - JS</title>
+</head>
+<body>
+    <!--Faça um programa que solicite um número. Após isso, o programa deve informar 
+    todos os números ímpares entre 0 e o número informado. -->
+    <h1>Números Ímpares</h1>
+    <input type="text" id="numero" placeholder="Digite um número">
+    <button onclick="mostrarImpares()">Mostrar Ímpares</button>
+    <p id="resultado"></p>
+
+    <script>
+        function mostrarImpares() {
+            const numero = parseInt(document.getElementById('numero').value);
+            const resultado = document.getElementById('resultado');
+            resultado.innerHTML = ""; 
+
+            if (isNaN(numero)) {
+                resultado.textContent = "Por favor, informe um número válido.";
+                return;
+            }
+
+            let impares = [];
+            for (let i = 1; i <= numero; i += 2) {
+                impares.push(i);
+            }
+
+            resultado.textContent = impares.join(", ");
+        }
+    </script>
+</body>
+</html>

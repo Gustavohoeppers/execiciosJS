@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 08 - JS</title>
+</head>
+<body>
+    <script>
+        let soma = 0;
+        let valor;
+
+        do {
+            valor = parseFloat(prompt("Digite um valor numérico (para sair da repetição informe o valor zero ou um menor ):"));
+            if (valor > 0) {
+                soma += valor;
+            }
+        } while (valor > 0);
+
+        document.write("A soma dos valores informados é: " +soma)    
+        alert("A soma dos valores informados é: " + soma);
+    </script>
+</body>
+</html>

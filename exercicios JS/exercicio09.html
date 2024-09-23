@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 09 - JS</title>
+    <!--Criar uma aplicação que contenha uma imagem e ao passar o mouse sobre essa imagem 
+    alterar para outra imagem. Ao retirar o mouse de cima  retornar a imagem anterior.-->
+    <style>
+        #imagem {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <img id="imagem" src="imagem1.jpg" alt="Imagem Inicial" onmouseover="trocarImagem()" onmouseout="restaurarImagem()">
+
+    <script>
+        function trocarImagem() {
+            document.getElementById("imagem").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR23xUrsubTbYrgBuEF8CwmfAeSnEvF_fIRRg&s";
+        }
+
+        function restaurarImagem() {
+            document.getElementById("imagem").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvQX42YU1NBfA2VCmoKnMUuXqnk3NmE9YlmA&s";
+        }
+    </script>
+</body>
+</html>

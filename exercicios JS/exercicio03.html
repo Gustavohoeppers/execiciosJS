@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 03 - JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #container {
+            margin-bottom: 10px;
+        }
+        #output {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            min-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Copiar Frase</h1>
+    <div id="container">
+        <input type="text" id="inputFrase" placeholder="Digite uma frase aqui">
+        <button onclick="copiarFrase()">Copiar</button>
+    </div>
+    <div id="output"></div>
+
+    <script>
+        function copiarFrase() {
+            // Obtém o valor do input
+            var frase = document.getElementById('inputFrase').value;
+            
+            // Define o conteúdo do div com a frase
+            document.getElementById('output').innerText = frase;
+        }
+    </script>
+</body>
+</html>

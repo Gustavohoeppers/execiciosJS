@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 06 - JS</title>
+</head>
+<body>
+    <!--Faça um programa que permita a entrada de um texto em um textarea e um input que vai
+    mostrando o número de caracteres digitados no textarea, a cada alteração do textarea. -->
+    <h1>Contador de Caracteres</h1>
+    <textarea id="texto" placeholder="Digite seu texto aqui..." rows="10" cols="50"></textarea>
+    <p>Caracteres digitados: <span id="contador">0</span></p>
+
+    <script>
+        const textarea = document.getElementById('texto');
+        const contador = document.getElementById('contador');
+
+        textarea.addEventListener('input', function() {
+            contador.textContent = textarea.value.length;
+        });
+    </script>
+</body>
+</html>
